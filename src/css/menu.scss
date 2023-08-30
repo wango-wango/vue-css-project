@@ -1,0 +1,90 @@
+@import "./variables.scss";
+.menu-container {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+  @include rwd($Tablet) {
+    width: 345px;
+    height: 100vh;
+  }
+  align-items: center;
+  .menu-title {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: larger;
+    font-weight: 600;
+    margin: 0 0 2rem;
+    @include rwd($Tablet) {
+      justify-content: center;
+      margin: 2rem 0;
+    }
+    .icon-show {
+      @include rwd($Tablet) {
+        display: none;
+      }
+    }
+  }
+  .menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+  }
+  .tablet-show {
+    display: none;
+    @include rwd($Tablet) {
+      display: flex;
+    }
+  }
+}
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  @include rwd($Tablet){
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    right: -3rem;
+    top: auto;
+  }
+}
+.active {
+  color: rgb(235, 100, 100);
+}
+
+// icon 漸變
+.icon-fade-enter-active,
+.icon-fade-leave-active {
+  transition: opacity 0.3s;
+}
+
+.icon-fade-enter,
+.icon-fade-leave-to {
+  opacity: 0;
+}
+
+// menu-list 進出入動畫
+
+.slide-leave-active,
+.slide-enter-active {
+  transition: max-height 0.5s ease-in-out;
+}
+
+.slide-enter-to,
+.slide-leave-from {
+  overflow: hidden;
+  max-height: 500px;
+}
+
+.slide-enter-from,
+.slide-leave-to {
+  overflow: hidden;
+  max-height: 0;
+}

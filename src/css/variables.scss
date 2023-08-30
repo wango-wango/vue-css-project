@@ -1,0 +1,9 @@
+$mobile: 480px;
+$Tablet: 768px;
+$leptop: 1024px;
+
+@mixin rwd($size) {
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}

@@ -1,0 +1,70 @@
+@import "./variables.scss";
+.character-container {
+  width: 100%;
+  height: 100vh;
+
+  .charcter-header {
+    width: 100%;
+    height: 70vh;
+    background-image: url(../assets/pictures/picture.png);
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: end;
+    padding: 1.6rem;
+    gap: 1rem;
+    .charcter-header-title {
+      font-size: 2rem;
+      color: $white;
+      font-weight: 600;
+    }
+    .charcter-header-content {
+      color: $white;
+    }
+  }
+  .charcter-content-container{
+    @include rwd ($leptop){
+      display: flex;
+    }
+    .charcter-content {
+      background-color: $background-brown;
+      overflow: auto;
+      width: 100%;
+      display: flex;
+      align-items: start; /* 垂直居中文字 */
+      padding: 2rem;
+      
+      .charcter-content-title {
+        flex: 0 0 auto; /* 不拉伸或缩小文字 */
+        position: relative;
+        display: inline-block;
+        font-size: 2rem;
+        margin: 1rem;
+        letter-spacing: 0.2rem;
+        .charcter-content-title-text {
+          display: inline-block;
+          font-weight: 800;
+          writing-mode: vertical-rl;
+          &::after {
+            position: absolute;
+            content: "";
+            bottom: 0rem;
+            right: -1rem;
+            width: 0.5rem;
+            height: 0.5rem;
+            border: 0.5rem solid $brown;
+            border-radius: 50%;
+          }
+        }
+      }
+      .charcter-content-content {
+        padding: 1rem 2rem;
+        letter-spacing: 2px;
+        line-height: 1.2rem;
+        flex-grow: 1; /* 填充剩余的空间 */
+      }
+    }
+  }
+}

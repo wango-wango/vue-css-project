@@ -1,6 +1,6 @@
 @import "./variables.scss";
 .menu-container {
-  padding: 2rem;
+  padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -18,7 +18,7 @@
     align-items: center;
     font-size: larger;
     font-weight: 600;
-    margin: 0 0 2rem;
+    margin: 0 0 1rem;
     @include rwd($Tablet) {
       justify-content: center;
       margin: 2rem 0;
@@ -46,12 +46,13 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   @include rwd($Tablet){
     width: 60px;
     height: 60px;
     position: absolute;
-    right: -3rem;
+    right: -3.5rem;
     top: auto;
   }
 }

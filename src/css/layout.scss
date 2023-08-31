@@ -1,0 +1,6 @@
+@import "./variables.scss";
+.layout-container {
+  @include rwd($Tablet) {
+    display: flex;
+  }
+}

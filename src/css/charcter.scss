@@ -6,7 +6,7 @@
   .charcter-header {
     width: 100%;
     height: 70vh;
-    background-image: url(../assets/pictures/picture.png);
+    background-image: url("../assets/pictures/picture.png");
     background-size: cover;
     background-position: center center;
     display: flex;
@@ -24,8 +24,8 @@
       color: $white;
     }
   }
-  .charcter-content-container{
-    @include rwd ($leptop){
+  .charcter-content-container {
+    @include rwd($leptop) {
       display: flex;
     }
     .charcter-content {
@@ -35,7 +35,7 @@
       display: flex;
       align-items: start; /* 垂直居中文字 */
       padding: 2rem;
-      
+
       .charcter-content-title {
         flex: 0 0 auto; /* 不拉伸或缩小文字 */
         position: relative;
